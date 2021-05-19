@@ -1,0 +1,44 @@
+$(document).ready(function(){
+    $('#archivo1').click(function(){
+        //console.log("Archivo1")
+        $.ajax({
+            type:'POST',
+            url: './control/control_archivo1.php',
+            data:{
+                'bandera_archivo1':'ARCVHIVO1'
+            },
+            success:function(resultado){
+                console.log(resultado);
+                $('#mostrar_archivo').text(resultado);
+            }
+        });
+    });
+    $('#archivo2').click(function(){
+        //console.log("Archivo1")
+        $.ajax({
+            type:'POST',
+            url: './control/control_archivo2.php',
+            data:{
+                'bandera_archivo2':'ARCVHIVO2'
+            },
+            success:function(resultado){
+                console.log(resultado);
+                $('#mostrar_archivo').text(resultado);
+            }
+        });
+    });
+    $('#archivo3').click(function(){
+        //console.log("Archivo1")
+        $.ajax({
+            type:'POST',
+            url: './control/control_archivo3.php',
+            data:{
+                'bandera_archivo3':'ARCVHIVO3'
+            },
+            success:function(resultado){
+                console.log(resultado);
+                $('#mostrar_archivo').text(resultado);
+            }
+        });
+    });
+});
